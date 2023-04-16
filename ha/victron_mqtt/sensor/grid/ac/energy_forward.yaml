@@ -1,0 +1,8 @@
+name: Victron MQTT Grid Forward Energy
+unique_id: victron_mqtt_grid_energy_forward
+state_topic: 'victron/N/+/grid/+/Ac/Energy/Forward'
+device_class: energy
+state_class: total_increasing
+unit_of_measurement: 'kWh'
+suggested_display_precision: 2
+value_template: "{{ value_json.value|float }}"

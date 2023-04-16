@@ -1,0 +1,12 @@
+alias: Keepalive for Victron MQTT
+description: "Sends regular keepalive messages to the broker in order to continue receiving updates from it."
+trigger:
+  - platform: time_pattern
+    seconds: /30
+condition: []
+action:
+  - service: mqtt.publish
+    data:
+      topic: victron/R/vrm-portal-id/keepalive
+      payload: "[\"vebus/#\",\"solarcharger/#\",\"battery/#\",\"system/#\",\"grid/#\"]"
+mode: single

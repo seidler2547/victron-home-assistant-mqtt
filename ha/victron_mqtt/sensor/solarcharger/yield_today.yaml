@@ -1,0 +1,8 @@
+name: Victron MQTT Solarcharger Daily Yield Today
+unique_id: victron_mqtt_solarcharger_daily_yield_0
+state_topic: 'victron/N/+/solarcharger/+/History/Daily/0/Yield'
+device_class: energy
+state_class: total_increasing
+unit_of_measurement: 'kWh'
+suggested_display_precision: 2
+value_template: "{{ value_json.value|float }}"

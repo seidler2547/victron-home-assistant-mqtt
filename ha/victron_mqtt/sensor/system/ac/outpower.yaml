@@ -1,0 +1,8 @@
+name: Victron MQTT VEBus Out Power
+unique_id: victron_mqtt_vebus_ac_out_p
+state_topic: 'victron/N/+/vebus/+/Ac/Out/P'
+device_class: power
+state_class: measurement
+unit_of_measurement: 'W'
+suggested_display_precision: 1
+value_template: "{{ value_json.value|float }}"

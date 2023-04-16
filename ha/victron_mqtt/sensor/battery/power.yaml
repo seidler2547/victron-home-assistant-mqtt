@@ -1,0 +1,8 @@
+name: Victron MQTT Battery Power
+unique_id: victron_mqtt_battery_power
+state_topic: 'victron/N/+/battery/+/Dc/0/Power'
+device_class: power
+state_class: measurement
+unit_of_measurement: 'W'
+suggested_display_precision: 1
+value_template: "{{ value_json.value|float }}"

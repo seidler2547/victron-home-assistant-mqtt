@@ -1,0 +1,8 @@
+name: Victron MQTT Battery Temperature
+unique_id: victron_mqtt_battery_temperature
+state_topic: 'victron/N/+/battery/+/Dc/0/Temperature'
+device_class: temperature
+state_class: measurement
+unit_of_measurement: '°C'
+suggested_display_precision: 1
+value_template: "{{ value_json.value }}"

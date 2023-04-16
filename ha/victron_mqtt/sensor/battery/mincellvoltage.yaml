@@ -1,0 +1,8 @@
+name: Victron MQTT Minimum Battery Cell Voltage
+unique_id: victron_mqtt_battery_mincellvoltage
+state_topic: 'victron/N/+/battery/+/System/MinCellVoltage'
+device_class: voltage
+state_class: measurement
+unit_of_measurement: 'V'
+suggested_display_precision: 3
+value_template: "{{ value_json.value|float }}"

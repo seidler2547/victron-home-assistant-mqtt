@@ -1,0 +1,4 @@
+automation: !include_dir_list ../victron_mqtt/automation
+mqtt:
+  sensor:        !include_dir_list ../victron_mqtt/sensor
+  binary_sensor: !include_dir_list ../victron_mqtt/binary_sensor

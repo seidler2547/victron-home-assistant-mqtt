@@ -1,0 +1,8 @@
+name: Victron MQTT Battery Voltage
+unique_id: victron_mqtt_battery_voltage
+state_topic: 'victron/N/+/battery/+/Dc/0/Voltage'
+device_class: voltage
+state_class: measurement
+unit_of_measurement: 'V'
+suggested_display_precision: 3
+value_template: "{{ value_json.value|float }}"
